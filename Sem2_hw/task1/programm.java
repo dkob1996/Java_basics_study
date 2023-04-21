@@ -12,12 +12,12 @@ import java.util.*;
 
 public class programm {
     public static void main(String[] args) {
-        // Scanner iScanner = new Scanner(System.in);
-        // System.out.printf("Enter path of file: ");
-        // System.out.println();
-        // String path = iScanner.next().toString();
+        Scanner iScanner = new Scanner(System.in);
+        System.out.printf("Enter path of file: ");
+        System.out.println();
+        String path = iScanner.next().toString();
 
-        String path = "Sem2_hw/task1/file.json";
+        //String path = "Sem2_hw/task1/file.json";
         String headOfSqlQuere = "SELECT * FROM students WHERE";
         String pars = readJSONFile(path);
 
@@ -26,7 +26,7 @@ public class programm {
         } else {
             System.out.printf("SQL Quere: \n %s %s;", headOfSqlQuere, convertJsonToSql(pars));
         }
-        // iScanner.close();
+        iScanner.close();
     }
 
     public static String readJSONFile(String tmp) {
@@ -45,23 +45,31 @@ public class programm {
 
     public static String convertJsonToSql(String tmp) {
         tmp = tmp.replaceAll("\\,\\s\"[a-zA-Z]*\":\"null\"", "");
-        tmp = tmp.replaceAll("\":",":");
-        tmp = tmp.replaceAll(",\\s\"",", ");
+        tmp = tmp.replaceAll("\":", ":");
+        tmp = tmp.replaceAll(",\\s\"", ", ");
         int tmpLength = tmp.length();
         StringBuilder tmpSql = new StringBuilder();
+
         for (int i = 0; i < tmpLength; i++) {
             if (tmp.charAt(i) == ':') {
                 tmpSql.append("=");
             } else if ((tmp.charAt(i) == '{') || (tmp.charAt(i) == '}')) {
                 tmpSql.append("");
-            } 
-            else if (tmp.charAt(i) == '\"'){
+            } else if (tmp.charAt(i) == '\"') {
                 tmpSql.append("'");
-            }else {
+            } else {
                 tmpSql.append(tmp.charAt(i));
             }
         }
-        tmpSql = tmpSql.replace(0, 1, "");
+        int ind1 = 0;
+        for (int i = 0; i < tmpSql.length(); i++) {
+            if (tmpSql.charAt(i) == '\'') {
+                ind1 = i + 1;
+                break;
+            }
+        }
+
+        tmpSql = tmpSql.replace(0, ind1, "");
         return tmpSql.toString();
     }
 }
