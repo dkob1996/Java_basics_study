@@ -64,12 +64,12 @@ public class programm {
         int ind1 = 0;
         for (int i = 0; i < tmpSql.length(); i++) {
             if (tmpSql.charAt(i) == '\'') {
-                ind1 = i + 1;
+                ind1 = i;
                 break;
             }
         }
 
-        tmpSql = tmpSql.replace(0, ind1, "");
+        tmpSql = tmpSql.replace(ind1, ind1+1, "");
         return tmpSql.toString();
     }
 }
