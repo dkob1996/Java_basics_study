@@ -1,0 +1,16 @@
+Apr 23, 2023 4:56:46 P.M. Sem2_hw.task4.programm main
+INFO: Scanner opened
+Apr 23, 2023 4:56:48 P.M. Sem2_hw.task4.programm main
+INFO: First number entered: 1
+Apr 23, 2023 4:56:49 P.M. Sem2_hw.task4.programm main
+INFO: Second number entered: 2
+Apr 23, 2023 4:56:50 P.M. Sem2_hw.task4.programm main
+INFO: Operator entered: +
+Apr 23, 2023 4:56:50 P.M. Sem2_hw.task4.programm main
+INFO: Case + opened: 
+Apr 23, 2023 4:56:50 P.M. Sem2_hw.task4.programm main
+INFO: Result + case: 3
+Apr 23, 2023 4:56:50 P.M. Sem2_hw.task4.programm main
+INFO: Result printed: 3
+Apr 23, 2023 4:56:50 P.M. Sem2_hw.task4.programm main
+INFO: Scanner closed
