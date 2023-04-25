@@ -1,9 +1,6 @@
 package Sem4_cw.task3;
 
 import java.util.ArrayList;
-import java.util.List;
-
-import java.util.*;
 
 /*
  * Создать список типа ArrayList<String>.
@@ -30,9 +27,8 @@ public class programm {
     }
 
     public static boolean parseIntOrNull(String string) {
-        int test;
         try {
-            test = Integer.parseInt(string);
+            Integer.parseInt(string);
             return true;
         } catch (NumberFormatException ex) {
             return false;
