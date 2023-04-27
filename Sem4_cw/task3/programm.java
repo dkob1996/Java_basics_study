@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 public class programm {
     public static void main(String[] args) {
+        // List<String> list = new ArrayList<>(List.of("", "", "", ""))
         ArrayList<String> some_list = new ArrayList<>();
         some_list.add("str");
         some_list.add("1");
