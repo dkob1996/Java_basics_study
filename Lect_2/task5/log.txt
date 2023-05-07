@@ -1,0 +1,4 @@
+сент. 28, 1990 1:21:04 AM Lesson_02.Ex005_Logger main
+WARNING: Тестовое логирование 1
+сент. 28, 1990 1:21:04 AM Lesson_02.Ex005_Logger main
+INFO: Тестовое логирование 2
