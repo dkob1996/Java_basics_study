@@ -3,6 +3,14 @@ package Lect4.task5;
 import java.util.Stack;
 
 public class programm {
+    private static boolean isDigit(String s) throws NumberFormatException {
+        try {
+            Integer.parseInt(s);
+            return true;
+        } catch (NumberFormatException e) {
+            return false;
+        }
+    }
     public static void main(String[] args) {
         var exp = "1 2 3 * +".split(" ");
         int res = 0;
