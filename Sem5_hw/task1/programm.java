@@ -46,5 +46,6 @@ public class programm {
                 storage.addFirst(command);
             }
         }
+        sc.close();
     }
 }

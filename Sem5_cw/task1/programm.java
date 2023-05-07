@@ -69,5 +69,6 @@ public class programm {
                 storage.add(Arrays.asList(text, num));
             }
         }
+        sc.close();
     }
 }
