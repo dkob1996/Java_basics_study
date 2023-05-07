@@ -1,7 +1,3 @@
-import javax.lang.model.element.VariableElement;
-
-import static java.lang.Character.getType;
-
 import java.io.*;
 import java.util.Scanner;
 
@@ -12,7 +8,7 @@ import java.util.Scanner;
 
 public class lect_1 {
     public static void main(String[] args) {
-        /**
+        
         System.out.println("Hello");
 
         String s;
@@ -52,19 +48,19 @@ public class lect_1 {
 
         String s1 ="qwer";
         System.out.println(s1.charAt(1));
-        */
+        
         // one massive value
-        /**
+        
         int[] arr = new int[10];
         System.out.println(arr.length); //10
 
         arr = new int[] {1,2,3,4,5,6,};
         System.out.println(arr.length); //6
-        */
+        
         // two massive value
-        /**
-        int[] arr[] = new int[3][5];
-        for (int[] line : arr) {
+        
+        int[] arr2[] = new int[3][5];
+        for (int[] line : arr2) {
             for (int item : line) {
                 System.out.printf("%d", item);
             }
@@ -80,41 +76,41 @@ public class lect_1 {
             }
             System.out.println();
         }
-         */
+         
         // get info from terminal
-        /**
+        
         Scanner iScanner = new Scanner(System.in);
         System.out.printf("name: ");
         String name = iScanner.nextLine();
         System.out.printf("Hello, %s!\n ", name);
         iScanner.close();
-         */
-        /**
-        Scanner iScanner = new Scanner(System.in);
+         
+        
+        Scanner iScanner1 = new Scanner(System.in);
         System.out.printf("int a: ");
-        int x = iScanner.nextInt();
+        int x = iScanner1.nextInt();
         System.out.printf("double a: ");
-        double y = iScanner.nextDouble();
+        double y = iScanner1.nextDouble();
         System.out.printf("%d + %f = %f", x, y, x+y);
-        iScanner.close();
-         */
-        /**
-        Scanner iScanner = new Scanner(System.in);
+        iScanner1.close();
+         
+        
+        Scanner iScanner2 = new Scanner(System.in);
         System.out.printf("int a: ");
-        boolean flag = iScanner.hasNextInt();
+        boolean flag = iScanner2.hasNextInt();
         System.out.println(flag);
-        int i = iScanner.nextInt();
+        int i = iScanner2.nextInt();
         System.out.println(i);
-        iScanner.close();
-        */
+        iScanner2.close();
+        
         sayHi(); //Hi!
         System.out.println(sum(1,3)); //4
         System.out.println(factor(5)); //120
 
-        /**
-        Scanner iScanner = new Scanner(System.in);
+        
+        Scanner iScanner3 = new Scanner(System.in);
         System.out.printf("Enter value: ");
-        int mounth = iScanner.nextInt();
+        int mounth = iScanner3.nextInt();
         String text = "";
         switch (mounth) {
             case 1:
@@ -128,9 +124,9 @@ public class lect_1 {
                 break;
         }
         System.out.println(text);
-        iScanner.close();
-    */
-    /**
+        iScanner3.close();
+    
+    
         int value = 321;
         int count = 0;
 
@@ -139,28 +135,25 @@ public class lect_1 {
             count++;
         }
         System.out.println(count);
-    */
-    /**
-        int value = 321;
-        int count = 0;
+    
+        int value1 = 321;
+        int count1=0;
 
         do {
-            value /=10;
-            count++;
-        } while (value !=0);
+            value1 /=10;
+            count1++;
+        } while (value1 !=0);
 
-        System.out.println(count);
-    */
-    /**
-    int[] arr = new  int[] {1,2,3,4,5,77};
-    for (int i = 0; i < arr.length; i++){
-        arr[i] = 10;
+        System.out.println(count1);
+    
+    int[] arr3 = new  int[] {1,2,3,4,5,77};
+    for (int j = 0; j < arr3.length; j++){
+        arr3[j] = 10;
     }
-    for (int item : arr) {
+    for (int item : arr3) {
         System.out.println(item);
     }
-     */
-    /**
+    
     //write
     try(FileWriter fw = new FileWriter("file.txt", false)){
         fw.write("line1");
@@ -173,25 +166,23 @@ public class lect_1 {
     catch (IOException ex){
         System.out.println(ex.getMessage());
     }
-    */
-    /**
+    
      // work with char to char
         try(FileReader fr = new FileReader("file.txt")) {
             int c;
             while ((c = fr.read()) != -1) {
-                char ch = (char) c;
-                if (ch == '\n') {
-                    System.out.println(ch);
+                char ch1 = (char) c;
+                if (ch1 == '\n') {
+                    System.out.println(ch1);
                 } else {
-                    System.out.println(ch);
+                    System.out.println(ch1);
                 }
             }
         }
         catch (IOException ex){
             System.out.println(ex.getMessage());
         }
-    */
-    /**
+    
     // work with string to string
     try (BufferedReader br = new BufferedReader(new FileReader("file.txt"))){
         String str;
@@ -203,7 +194,7 @@ public class lect_1 {
     catch (IOException ex){
         System.out.println(ex.getMessage());
     }
-    */
+   
     }
     static String getType(Object o) {
         return o.getClass().getSimpleName();
