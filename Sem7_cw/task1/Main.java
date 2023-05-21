@@ -93,7 +93,7 @@ public class Main {
     /**
      * Посчитать количество уникальных элементов в списке
      */
-    private static int uniqueCount(List<Integer> integers) {
+    public static int uniqueCount(List<Integer> integers) {
         Set<Integer> hashSet = new HashSet<>(integers);
         return hashSet.size();
 //        for (Integer x : integers) {
